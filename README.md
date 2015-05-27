@@ -47,3 +47,13 @@
 ## 方怡提供资源
 
 1. 见source目录
+
+## 项目部署
+
+阿里服务器部署：
+
+https://github.com/maodouio/meteor-master-classes/wiki/how-to-deploy-meteor-to-aliyun-vitual-host
+
+mogon本地和云服务器数据备份：
+
+https://github.com/maodouio/meteor-master-classes/wiki/how-to-dump-and-restore-mongo-db-from-localhost-to-aliyun-server
