@@ -7,3 +7,36 @@
 账号：doctor_office@126.com
 密码：doctoroffice
 
+
+
+ {{#ionView}}
+    {{#ionContent}}
+      {{> quickForm collection="Posts" doc=post id="edit-form" type="update" buttonContent="Save Post"}}
+    {{/ionContent}}
+  {{/ionView}}
+
+
+
+"奥氮平", "百忧解","养脑清血" ,"来士普", "阿斯匹林"
+
+"每晚一次",
+"每早一次",
+"每日两次",
+"每日三次",
+"隔日一次",
+
+
+"半片",
+"一片",
+"1.5片",
+"2片",
+"3片",
+
+"1ml",
+"2ml",
+"3ml",
+"4ml",
+"5ml",
+"10ml",
+"20ml",
+
