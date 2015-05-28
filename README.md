@@ -57,3 +57,10 @@ https://github.com/maodouio/meteor-master-classes/wiki/how-to-deploy-meteor-to-a
 mogon本地和云服务器数据备份：
 
 https://github.com/maodouio/meteor-master-classes/wiki/how-to-dump-and-restore-mongo-db-from-localhost-to-aliyun-server
+
+
+## 学习记录
+
+设置accounts字段：
+
+https://github.com/meteor-useraccounts/core/blob/master/Guide.md#configuring-texts
