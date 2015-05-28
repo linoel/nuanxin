@@ -100,19 +100,44 @@ AccountsTemplates.addFields([
   {
       _id: "username",
       type: "text",
-      displayName: "username",
+      displayName: "姓名",
       required: true,
-      minLength: 5,
+      minLength: 2,
   },
+
   {
       _id: 'email',
       type: 'email',
       required: true,
-      displayName: "email",
+      displayName: "邮箱",
       re: /.+@(.+){2,}\.(.+){2,}/,
       errStr: 'Invalid email',
   },
-  pwd
+
+  {
+    _id: 'phone',
+    type: 'tel',
+    displayName: "电话",
+    required: true,
+    minLength: 11,
+    errStr: 'Invalid Phone number!',
+  },
+
+  {
+    _id: 'password',
+    type: 'password',
+    displayName: "密码",
+    required: true,
+    minLength: 6,
+  },
+
+  {
+      _id: 'username_and_email',
+      type: 'text',
+      required: true,
+      displayName: "用户登录",
+  },
+
 ]);
 
 
