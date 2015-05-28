@@ -1,0 +1,42 @@
+<template name="index">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">患者宝宝</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+
+
+        {{#ionItem path="userAccounts" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+            用户管理
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+
+        {{#ionItem path="forms" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          创建服药卡
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+
+        {{#ionItem path="lists" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          常见问题
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+
+        {{#ionItem path="modal" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          我的服药卡
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

@@ -1,0 +1,20 @@
+<template name="forms">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">服药卡</h1>
+  {{/contentFor}}
+
+
+
+  {{#ionView}}
+    {{#ionContent}}
+
+      {{> quickForm collection="Posts" doc=post id="edit-form" type="update" buttonContent="提交"}}
+
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>
