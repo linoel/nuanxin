@@ -1,0 +1,37 @@
+<template name="recent">
+
+  {{#contentFor "headerButtonLeft"}}
+    <!-- <button class="button button-clear pull-left button-positive" data-ion-modal="search">
+      {{> ionIcon icon='ios-search'}}
+    </button> -->
+
+    <button class="button button-clear pull-left button-positive">
+      {{>ionNavBackButton class="button-positive" text=false}}
+    </button>
+
+  {{/contentFor}}
+
+  <!-- {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+      {{> ionIcon icon='ios-plus-empty'}}
+    </button>
+  {{/contentFor}} -->
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">医生开药</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+    {{> quickForm collection="Posts" doc=post id="edit-form" type="update" buttonContent="提交"}}
+
+      <!-- {{#ionList}}
+        {{#each products}}
+          {{> _productItem product=this path="products.show"}}
+        {{/each}}
+      {{/ionList}} -->
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

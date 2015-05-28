@@ -1,0 +1,28 @@
+<template name="appLayout">
+
+  {{#ionBody}}
+    {{> ionNavBar}}
+
+    {{#ionNavView}}
+      {{> yield}}
+    {{/ionNavView}}
+
+    {{#if isAndroid}}
+      {{#ionTabs style="android"}}
+        {{> ionTab title="Trending" path="trending" icon="android-star"}}
+        {{> ionTab title="Recent" path="recent" icon="android-time"}}
+        {{> ionTab title="Notifications" path="notifications" icon="android-notifications"}}
+        {{> ionTab title="Profile" path="profile" icon="android-happy"}}
+      {{/ionTabs}}
+    {{else}}
+      {{#ionTabs style="ios"}}
+        {{> ionTab title="常见问题" path="trending" iconOff="ios-bolt-outline" iconOn="ios-bolt" class="tab-item-positive"}}
+        {{> ionTab title="开药" path="recent" iconOff="ios-clock-outline" iconOn="ios-clock" class="tab-item-positive"}}
+        {{> ionTab title="我的服药卡" path="notifications" iconOff="ios-bell-outline" iconOn="ios-bell" class="tab-item-positive"}}
+        {{> ionTab title="预约电话" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}
+
+      {{/ionTabs}}
+    {{/if}}
+  {{/ionBody}}
+
+</template>
