@@ -1,5 +1,21 @@
 Posts = new Mongo.Collection('Posts');
 
+Posts.before.insert(function (userId, doc) {
+  doc.createdAt = new Date();
+  doc.myuserid = Meteor.userId();
+});
+
+Posts.helpers({
+  postdate: function () {
+    return moment(this.createdAt).format('M/D');
+  },
+  postdrug: function () {
+    return Meteor.users.findOne({_id: this.userId});
+  },
+
+});
+
+
 Posts.attachSchema(new SimpleSchema({
 
   items: {
@@ -15,13 +31,13 @@ Posts.attachSchema(new SimpleSchema({
        "items.$.datebegin": {
          label: "起始时间",
          type: Date,
-          optional: true,
+          optional: false,
        },
 
        "items.$.dateend": {
          label: "停止时间",
          type: Date,
-          optional: true,
+          optional: false,
        },
 
        "items.$.item": {
@@ -33,8 +49,9 @@ Posts.attachSchema(new SimpleSchema({
          "养脑清血",
          "来士普",
          "阿斯匹林",
+         "",
           ],
-          optional: true,
+          optional: false,
        },
 
        "items.$.times": {
@@ -46,6 +63,7 @@ Posts.attachSchema(new SimpleSchema({
             "每日两次",
             "每日三次",
             "隔日一次",
+            "",
            ],
            optional: true,
        },
@@ -59,6 +77,7 @@ Posts.attachSchema(new SimpleSchema({
             "1.5片",
             "2片",
             "3片",
+            "",
            ],
            optional: true,
        },
@@ -74,6 +93,7 @@ Posts.attachSchema(new SimpleSchema({
             "5ml",
             "10ml",
             "20ml",
+            "",
            ],
            optional: true,
        },

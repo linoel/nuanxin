@@ -1,9 +1,10 @@
 Router.route('/trending', {
   name: 'trending'
 });
-Router.route('/', {
+
+/*Router.route('/', {
   name: 'userAccounts'
-});
+});*/
 
 Router.route('/recent', {
   name: 'recent'

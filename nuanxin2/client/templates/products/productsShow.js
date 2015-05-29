@@ -1,17 +1,17 @@
 Template.productsShow.created = function () {
-  this.autorun(function () {
+  /*this.autorun(function () {
     this.subscription = Meteor.subscribe('product', Router.current().params._id);
-  }.bind(this));
+  }.bind(this));*/
 };
 
 Template.productsShow.rendered = function () {
-  this.autorun(function () {
+  /*this.autorun(function () {
     if (!this.subscription.ready()) {
       IonLoading.show();
     } else {
       IonLoading.hide();
     }
-  }.bind(this));
+  }.bind(this));*/
 };
 
 Template.productsShow.helpers({

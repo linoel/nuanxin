@@ -103,3 +103,7 @@ https://github.com/maodouio/meteor-master-classes/wiki/how-to-dump-and-restore-m
 设置accounts字段：
 
 https://github.com/meteor-useraccounts/core/blob/master/Guide.md#configuring-texts
+
+修改主题色调
+
+_app-variables.scss 
